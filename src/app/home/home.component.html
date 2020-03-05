@@ -1,0 +1,28 @@
+
+  <!-- <div class="dropdown">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     Filter By Genre
+    </button>
+    <div class="dropdown-menu dropdown-menu-right">
+      <button class="dropdown-item" type="button">Action</button>
+      <button class="dropdown-item" type="button">Adventure</button>
+      <button class="dropdown-item" type="button">Comedy</button>
+    </div>
+  </div> -->
+  <nav class="navbar fixed-top justify-content-end">
+  <select id= "filter" (change)="movieFilter($event.target.value)"> 
+    <option selected value = ''>Filter By Genre</option>
+      <option *ngFor= "let gn of genres" value = {{gn}}>{{gn}}</option>
+  </select>
+</nav>
+  <br><br>
+  <div class="conatiner row">  
+    <ul class = "row" style="list-style: none;" *ngFor = "let movie of movies">
+        <li class="col" style=" display:inline;">
+            <app-movie-home [movieData] = "movie"></app-movie-home>
+        </li>
+    </ul>
+</div>
+<div *ngIf = 'message'>
+{{this.message}}
+</div>

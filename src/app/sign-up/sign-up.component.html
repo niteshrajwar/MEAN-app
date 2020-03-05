@@ -1,0 +1,31 @@
+<div class= "container">
+    <h3> Sign up </h3>
+      <form (ngSubmit)="onSubmit(signInForm)" #signInForm="ngForm">
+        <div class="form-group form-row">
+            <label for='email'>Enter your name </label>
+            <input id = 'text' class = "form-control" type="email" ngModel placeholder="enter name"  name = 'name' #name = 'ngModel'>
+          </div>
+          <div class="form-group form-row">
+            <label for='email'>Enter your email-Id </label>
+            <input id = 'email' class = "form-control" type="email" ngModel placeholder="enter email"  name = 'email' #email = 'ngModel'>
+          </div>
+          <div class="form-group form-row">
+            <label for='password'>Enter Password </label>
+            <input id = 'password' class = "form-control" type="password" ngModel placeholder="enter password"  name = 'password' #password = 'ngModel'>
+          </div>
+          <div class="form-group form-row">
+            <label for='conpwd'>Confirm Password </label>
+            <input id = 'conpwd' class = "form-control" type="password" ngModel placeholder="Confirm password"  name = 'conpassword' #conpwd = 'ngModel'>
+          </div>
+          <!-- <div class="form-group form-row">
+          <label for='contact'>Enter Mobile number </label>
+          <input id = 'contact' class = "form-control" type="number" ngModel placeholder="enter Phone no"  name = 'contact' #email = 'ngModel'>
+        </div> -->
+        <div class="form-group form-row">
+          <label for='age'>Enter age </label>
+          <input id = 'age' class ="form-control" type="number" placeholder="enter your age" ngModel name = 'age' #age = 'ngModel'><br>
+        </div>
+          <button class="btn btn-primary btn-md" type = "submit">Login</button>
+       
+      </form>
+  </div>

@@ -1,0 +1,15 @@
+<div class= "container">
+    <h3> Add New People </h3>
+      <form (ngSubmit)="onSubmit(userForm)" #userForm="ngForm">
+          <div class="form-group form-row">
+          <label for='name'>Enter name :: </label>
+          <input id = 'name' class = "form-control" type="text" ngModel placeholder="enter name"  name = 'name' #name = 'ngModel'>
+        </div>
+        <div class="form-group form-row">
+          <label for='age'>Enter age :: </label>
+          <input id = 'age' class ="form-control" type="number" placeholder="enter age" ngModel name = 'age' #age = 'ngModel'><br>
+        </div>
+          <button class="btn btn-primary btn-md" type = "submit">Add</button>
+       
+      </form>
+  </div>

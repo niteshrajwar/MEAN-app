@@ -1,0 +1,4 @@
+<div class="container" *ngIf = "movieData">
+    <a href="/movie/{{movieData.id}}"><img class="pics" src = {{movieData.posterUrl}} onerror="this.onerror=null;this.src='././assets/No_Image_Available.png'" alt = "Picture not available"></a>
+    <div>{{movieData.title}}</div>
+</div>

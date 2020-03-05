@@ -1,13 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-    public movieData:Subject <any>;
-  constructor( ) { }
+    public movieData = new BehaviorSubject<any>(null);
+    private sharedData$: Observable<any> 
+   
+    publishData(data: string) {
+        this.movieData.next(data);
+    }
 
-  private mov: Subject <any> 
+    getData(): Observable<any> {
+        return this.movieData.asObservable();
+    }
 }

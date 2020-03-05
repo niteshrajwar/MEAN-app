@@ -42,11 +42,15 @@ export class HomeComponent implements OnInit {
         this.movies = [];
         alert(data.message)
       }
-     
     })
   } else {
     this.getInfo(this.url);
   }
 }
-  
+  search = (event) => {
+    const key = (event.target.value).toLocaleLowerCase();
+   this.movies =  this.movies.filter((mov) => {
+     return ((mov.title).toLocaleLowerCase()).includes(event.target.value);
+   })
+  }
 }

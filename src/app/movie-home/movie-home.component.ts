@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-movie-home',
@@ -9,14 +10,14 @@ import { Router } from '@angular/router';
 export class MovieHomeComponent implements OnInit {
   @Input() movieData = null;
   constructor(
-    private _router: Router
+    private _router: Router,
+    private _userService: UserService
   ) { }
 
   ngOnInit(): void {
   }
-  redirectToMovieDetails = (id) => {
-    debugger
-   if (id) {
-   }
+  redirectToMovieDetails = (movieData) => {
+   this._userService.publishData(movieData);
+   this._router.navigateByUrl('movie/' + (movieData.id).toString());
   }
 }

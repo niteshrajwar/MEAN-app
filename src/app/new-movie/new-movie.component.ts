@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { AppService } from '../app.service';
 
 @Component({
-  selector: 'app-new-person',
-  templateUrl: './new-person.component.html',
-  styleUrls: ['./new-person.component.css']
+  selector: 'app-new-movie',
+  templateUrl: './new-movie.component.html',
+  styleUrls: ['./new-movie.component.css']
 })
-export class NewPersonComponent implements OnInit {
+export class NewMovieComponent implements OnInit {
   public message = null;
   constructor(
     private _appService: AppService

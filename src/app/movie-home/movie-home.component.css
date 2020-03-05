@@ -1,9 +1,10 @@
 .container {
-    border: black;
-    border-style: dashed;
     margin-top: 20px;
 }
 .pics {
     height: 100%;
     width: 100%;
+}
+.search {
+    margin-top: 15px;
 }

@@ -59,7 +59,6 @@ app.post('/persons', (req, res, err) => {
  });
  app.post('/login', (req,res,err) => {
     const {email, password} = req.body;
-    console.log(email , password);
     const data = db.user.findOne({email:email});
     // then((data) => {
       //  console.log(data);
@@ -131,14 +130,15 @@ app.get('/movies/:genre', (req,res) => {
 }
 });
 app.get('/movie/:id', (req,res) => {
-  const movieid = Number(req.params.id);
-  console.log(movieid);
-  const movie = db.movies.findOne({id: movieid});
-  console.log(movie);
-  if (movie) { 
+  const movieid = req.params.id;
+  const movie = db.movies.find();
+  const filterMovie = movie.filter((mov) => {
+    return mov.id == movieid;
+  })
+  if (filterMovie) { 
    return res.status(200).json({
      status:true,
-     data:movie
+     movie: filterMovie[0]
    })
   } else {
     return res.status(200).json({
@@ -151,7 +151,6 @@ app.get('/persons/:name', (req,res) => {
  const person =  personData.find((pr) => {
     return pr.name === req.params.name;
   })
-  console.log(person);
   if(person) {
     return res.status(200).json(person);
   } else {

@@ -10,10 +10,15 @@
     </div>
   </div> -->
   <nav class="navbar fixed-top justify-content-end">
-  <select id= "filter" (change)="movieFilter($event.target.value)"> 
+    <!-- <div class="conatiner search fixed-top justify-content-end"> -->
+    <span>  <input class="search" placeholder="search any movie" (change)="search($event)"> </span>
+  <!-- </div> -->
+  <span>
+  <select class="filter" id= "filter" (change)="movieFilter($event.target.value)"> 
     <option selected value = ''>Filter By Genre</option>
       <option *ngFor= "let gn of genres" value = {{gn}}>{{gn}}</option>
   </select>
+</span>
 </nav>
   <br><br>
   <div class="conatiner row">  

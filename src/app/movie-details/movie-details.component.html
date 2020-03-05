@@ -1,4 +1,18 @@
 <div class="container" *ngIf = "movieData">
-    <a href="/movie/{{movieData.id}}"><img class="pics" src = {{movieData.posterUrl}} onerror="this.onerror=null;this.src='././assets/No_Image_Available.png'" alt = "Picture not available"></a>
-    <div>{{movieData.title}}</div>
+   <span class="row">
+    <img class="pic col" src = {{movieData.posterUrl}} onerror="this.onerror=null;this.src='././assets/No_Image_Available.png'" alt = "Picture not available">
+    <div class="col-md-5">
+       <span>  <b>Title: {{movieData.title}}</b></span><br>
+       <span><b>Release Year: {{movieData.year}}</b></span><br>
+       <span>  <b>Run Time: {{movieData.runtime}} minutes</b></span><br>
+       <b>Genres: </b> <span *ngFor = "let gn of movieData.genres"> <b>{{gn}},</b></span><br>
+       <span>  <b>Director: {{movieData.director}}</b></span><br>
+       <span>  <b>Casts: {{movieData.actors}}</b></span><br>
+       <span>  <b>Plot:</b> {{movieData.plot}}</span><br>
+    </div>
+</span>
 </div>
+
+
+
+

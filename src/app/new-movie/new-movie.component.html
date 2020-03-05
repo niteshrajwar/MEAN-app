@@ -1,0 +1,40 @@
+<div class="container">
+  <h3> Add New Movies to the list </h3>
+  <form (ngSubmit)="onSubmit(userForm)" #userForm="ngForm">
+    <div class="form-group form-row">
+      <label for='name'>Enter title :: </label>
+      <input id='name' class="form-control" type="text" ngModel placeholder="enter name" name='name' #name='ngModel'>
+    </div>
+    <div class="form-group form-row">
+      <label for='year'>Enter Release Year :: </label>
+      <input id='year' class="form-control" type="number" placeholder="enter release year" ngModel name='year' #year='ngModel'><br>
+    </div>
+<div class="form-group form-row">
+  <label for='runtime'>Enter runtime :: </label>
+  <input id='runtime' class="form-control" type="number" placeholder="enter Runtime" ngModel name='runtime' #runtime='ngModel'><br>
+</div>
+<div class="form-group form-row">
+  <label for='genres'>Enter Genre :: </label>
+  <input id='age' class="form-control" type="number" placeholder="enter Genre" ngModel name='age' #age='ngModel'><br>
+</div>
+<div class="form-group form-row">
+  <label for='director'>Enter Director name :: </label>
+  <input id='director' class="form-control" type="text" placeholder="enter director name" ngModel name='director' #director='ngModel'><br>
+</div>
+<div class="form-group form-row">
+  <label for='actors'>Enter Actor name( separate by comma(,) for multiple names) :: </label>
+  <input id='actors' class="form-control" type="text" placeholder="enter Actors" ngModel name='actors' #actors='ngModel'><br>
+</div>
+<div class="form-group form-row">
+  <label for='plot'>Enter Plot :: </label>
+  <input id='plot' class="form-control" type="textarea" placeholder="enter plot" ngModel name='plot' #plot='ngModel'><br>
+</div>
+<div class="form-group form-row">
+  <label for='poster'>Enter posterUrl :: </label>
+  <input id='poster' class="form-control" type="text" placeholder="enter poster url link" ngModel name='poster' #poster='ngModel'><br>
+</div>
+
+<button class="btn btn-primary btn-md" type="submit">Add</button>
+
+</form>
+</div>

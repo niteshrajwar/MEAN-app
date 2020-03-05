@@ -1,1 +1,10 @@
 
+.search {
+    width: 200px;
+    height: 25px;
+    padding: 10px;
+    margin-right: 10px;
+}
+.filter {
+    margin-right: 10px;
+}

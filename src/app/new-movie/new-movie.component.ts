@@ -16,8 +16,15 @@ export class NewMovieComponent implements OnInit {
   }
   onSubmit = (form) => {
     const persondata = {
-      'name': form.value.name,
-      'age': form.value.age
+        "id": 146,
+        "title": form.value.title,
+        "year": form.value.year,
+        "runtime": form.value.runtime,
+        "genres": [form.value.genres],
+        "director": form.value.director,
+        "actors": form.value.actors,
+        "plot": form.value.plot,
+        "posterUrl": form.value.poster
     }
     this._appService.updatePersondata(persondata);
     this._appService.postdata(persondata).subscribe((response) => {

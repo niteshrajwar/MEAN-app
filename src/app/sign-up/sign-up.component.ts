@@ -17,11 +17,13 @@ export class SignUpComponent implements OnInit {
   ngOnInit(): void {
   }
  onSubmit = (form) => {
+   debugger
   const requestBody = {
     name: form.value.name,
     age:form.value.age,
     email:form.value.email,
     password: form.value.password,
+    accountType: form.value.accounttype
   };
    this._appService.signUp(requestBody).subscribe((response) => {
      if(response.status) {

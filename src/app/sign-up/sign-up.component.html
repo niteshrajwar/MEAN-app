@@ -25,6 +25,13 @@
           <label for='age'>Enter age </label>
           <input id = 'age' class ="form-control" type="number" placeholder="enter your age" ngModel name = 'age' #age = 'ngModel'><br>
         </div>
+        <div class="form-group form-row">
+          <label for='accounttype'>Select Account Type  </label>
+          <select id = "accounttype" class="form-control" ngModel name="accounttype" #accounttype = 'ngModel'>
+            <option value="user" selected>User</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
           <button class="btn btn-primary btn-md" type = "submit">Login</button>
        
       </form>

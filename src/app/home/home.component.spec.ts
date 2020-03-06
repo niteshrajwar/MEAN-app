@@ -29,4 +29,13 @@ describe('HomeComponent', () => {
   it('should call function getInfo', () => {
     component.getInfo('http://localhost:8080/persons');
   })
+  it('should call function movieFilter', () => {
+    component.movieFilter('Comedy');
+  })
+  it('should call function movieFilter negative case', () => {
+    component.movieFilter('');
+  })
+  it('should call function search', () => {
+    component.search('');
+  })
 });

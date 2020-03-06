@@ -9,9 +9,10 @@
       <button class="dropdown-item" type="button">Comedy</button>
     </div>
   </div> -->
+  <div class="container">
   <nav class="navbar fixed-top justify-content-end">
     <!-- <div class="conatiner search fixed-top justify-content-end"> -->
-    <span>  <input class="search" placeholder="search any movie" (change)="search($event)"> </span>
+    <span>  <input class="search" placeholder="search any movie" (change)="search($event.target.value)"> </span>
   <!-- </div> -->
   <span>
   <select class="filter" id= "filter" (change)="movieFilter($event.target.value)"> 
@@ -28,6 +29,14 @@
         </li>
     </ul>
 </div>
+<!-- <ul class="pagination">
+  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+  <li class="page-item"><a class="page-link" href="#">1</a></li>
+  <li class="page-item"><a class="page-link" href="#">2</a></li>
+  <li class="page-item"><a class="page-link" href="#">3</a></li>
+  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+</ul> -->
 <div *ngIf = 'message'>
 {{this.message}}
+</div>
 </div>

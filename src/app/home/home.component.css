@@ -4,7 +4,12 @@
     height: 25px;
     padding: 10px;
     margin-right: 10px;
+    margin-top: 75px;
 }
 .filter {
     margin-right: 10px;
+    margin-top: 75px;
+}
+.container {
+    margin-top: 100px;
 }

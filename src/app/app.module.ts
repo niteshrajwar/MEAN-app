@@ -13,6 +13,10 @@ import { MovieHomeComponent } from './movie-home/movie-home.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component'
 import { UserService} from  './user.service';
 import { NewMovieComponent } from './new-movie/new-movie.component';
+import { DictionaryComponent } from './dictionary/dictionary.component';
+import { HeaderComponent } from './header/header.component';
+import { InlineSVGModule } from 'ng-inline-svg';
+import { ProfileComponent } from './profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,13 +25,17 @@ import { NewMovieComponent } from './new-movie/new-movie.component';
     LoginComponent,
     SignUpComponent,
     MovieHomeComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    DictionaryComponent,
+    HeaderComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    InlineSVGModule.forRoot()
   ],
   providers: [AppService, UserService],
   bootstrap: [AppComponent]

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { NewMovieComponent } from './new-movie/new-movie.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
     { path: 'add', component: NewMovieComponent},
     { path: 'register', component: SignUpComponent},
     {path: 'movie/:movieid', component: MovieDetailsComponent},
+    {path: 'profile', component: ProfileComponent},
   //  { path: '', component: AppComponent},
     {path: '**', redirectTo: ''}
 ];

@@ -47,10 +47,10 @@ export class HomeComponent implements OnInit {
     this.getInfo(this.url);
   }
 }
-  search = (event) => {
-    const key = (event.target.value).toLocaleLowerCase();
+  search = (searchKey) => {
+    const key = (searchKey).toLocaleLowerCase();
    this.movies =  this.movies.filter((mov) => {
-     return ((mov.title).toLocaleLowerCase()).includes(event.target.value);
+     return ((mov.title).toLocaleLowerCase()).includes(key);
    })
   }
 }

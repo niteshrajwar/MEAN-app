@@ -3,6 +3,8 @@ const app = express();
 const personData = require('./person');
 const movies = require('./movies-data');
 const bodyParser = require('body-parser');
+const axios = require('axios');
+const request = require('request-promise');
 // const mongoClient = require('mongodb').MongoClient;
 // const url = "mongodb://localhost:27017/";
 // const MongoClient = require('mongodb').MongoClient;
@@ -105,10 +107,25 @@ app.post('/persons', (req, res, err) => {
   // });
   } 
  });
+ app.post('/meaning', (req,res) => {
+  const word = req.body.word;
+  console.log(word);
+  request('https://wordsapiv1.p.mashape.com/words/'+ word).then((res) => {
+    return res.status(200).json({
+      status:true,
+      result: res
+    })
+  }).catch((error) => {
+    return res.status(500).json({
+      status:false,
+      message: error
+    })
+  })
+ });
 app.get('/persons', (req,res)=>{
  return res.status(200).json(db.user.find());
 });
-app.get('/movies', (req, res) => {
+ app.get('/movies', (req, res) => {
   return res.status(200).json(db.movies.find());
 })
 app.get('/movies/:genre', (req,res) => {
